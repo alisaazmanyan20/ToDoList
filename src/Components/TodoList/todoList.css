@@ -1,0 +1,9 @@
+.todo-list {
+    margin: 50px 0;
+}
+
+@media only screen and (max-device-width: 400px) {
+    .todo-list {
+        margin: 100px 0;
+    }
+}
