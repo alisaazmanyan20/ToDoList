@@ -9,7 +9,7 @@ const TodoForm = ({onAdd}) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        if (text.trim()) {
+        if (text.trim() && text.length > 1 ) {
             onAdd(text)
             setText("")
         }
@@ -24,7 +24,24 @@ const TodoForm = ({onAdd}) => {
             <form className="todo-form"
                   onSubmit={onSubmit}
             >
-                <input type="text"
+                <input style={error ?
+                        {
+                            border: "1px solid red",
+                            width: "85%",
+                            height: "50px",
+                            borderRadius: "4px",
+                            outline: "none",
+                            fontsize: "18px",
+
+                } : {
+                        width: "85%",
+                        height: "50px",
+                        borderRadius: "4px",
+                        outline: "none",
+                        fontsize: "18px",
+                    }
+                }
+                       type="text"
                        placeholder="Write here..."
                        value={text}
                        onChange={(e) => {
