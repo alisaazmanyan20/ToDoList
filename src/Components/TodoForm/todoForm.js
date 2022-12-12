@@ -49,10 +49,9 @@ const TodoForm = ({onAdd}) => {
                        }}
 
                 />
-                <button
-                        onSubmit={onAdd}
-                >
-                    Add</button>
+                <button onSubmit={onAdd}>
+                    Add
+                </button>
                 <br/>
                 {error && text.length <= 1 ?
                 <span style={{color: "red"}}>Task content can contain max 54 characters</span>: ""}
